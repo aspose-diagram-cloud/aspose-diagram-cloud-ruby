@@ -11,7 +11,7 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 $grant_type = 'client_credentials' # replace NULL with a proper value
 $client_id = 'xxxxxxx' # replace NULL with a proper value
 $client_secret =  'xxxxxxxx' # replace NULL with a proper value

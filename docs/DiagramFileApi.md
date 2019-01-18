@@ -18,7 +18,7 @@ Read document info or export.
 ### Example
 ```ruby
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::DiagramFileApi.new
 
@@ -71,7 +71,7 @@ Convert document and save result to storage.
 ### Example
 ```ruby
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::DiagramFileApi.new
 
@@ -128,7 +128,7 @@ Create new diagram and save result to storage.
 ### Example
 ```ruby
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::DiagramFileApi.new
 
@@ -181,7 +181,7 @@ Upload file and save result to storage.
 ### Example
 ```ruby
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::DiagramFileApi.new
 

@@ -52,7 +52,7 @@ ruby -Ilib script.rb
 Please follow the [installation](#installation) procedure and then run the following code:
 ```ruby
 # Load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::DiagramFileApi.new
 

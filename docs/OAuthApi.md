@@ -15,7 +15,7 @@ Get Access token
 ### Example
 ```ruby
 # load the gem
-require 'AsposeDiagramCloud'
+require 'aspose_diagram_cloud'
 
 api_instance = AsposeDiagramCloud::OAuthApi.new
 

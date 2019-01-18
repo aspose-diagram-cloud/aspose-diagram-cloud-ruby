@@ -13,7 +13,7 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 $:.push File.expand_path("../lib", __FILE__)
-require "AsposeDiagramCloud/version"
+require "aspose_diagram_cloud/version"
 
 Gem::Specification.new do |s|
   s.name        = "aspose_diagram_cloud"
