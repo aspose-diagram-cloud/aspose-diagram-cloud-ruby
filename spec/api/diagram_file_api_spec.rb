@@ -19,18 +19,10 @@ require 'json'
 describe 'DiagramFileApi' do
   before do
     # run before each test
-     # run before each test
-     if $access_token == nil then
-      conf = AsposeDiagramCloud::Configuration.new
-      conf.base_path = ""
-      instance = AsposeDiagramCloud::OAuthApi.new(AsposeDiagramCloud::ApiClient.new(conf))
-      $access_token = instance.o_auth_post($grant_type,$client_id,$client_secret).access_token
-  end
-
-  conf = AsposeDiagramCloud::Configuration.new
-  conf.access_token = $access_token	
-  client = AsposeDiagramCloud::ApiClient.new(conf)
-  client.default_headers["Authorization"] ="Bearer " + $access_token
+    conf = AsposeDiagramCloud::Configuration.new
+    conf.api_key['app_sid'] = $client_id
+    conf.api_key['api_key'] = $client_secret
+    client = AsposeDiagramCloud::ApiClient.new(conf)
     @instance = AsposeDiagramCloud::DiagramFileApi.new(client)
   end
 

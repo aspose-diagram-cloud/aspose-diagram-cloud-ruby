@@ -18,6 +18,22 @@ module AsposeDiagramCloud
 
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
+      request_token
+    end
+
+     #
+     # Gets a request token from server
+     #
+     def request_token
+      config = @api_client.config
+      base_path = config.base_path 
+      config.base_path = '/'
+      request_url = "/oauth2/token"
+      post_data = "grant_type=client_credentials" + "&client_id=" + config.api_key['app_sid'] + "&client_secret=" + config.api_key['api_key']
+      data, status_code, header = @api_client.call_api(:POST, request_url, :body => post_data, :return_type => 'Object')
+      @api_client.config.access_token = data[:access_token]
+      @api_client.config.base_path = base_path
+      @api_client.default_headers["Authorization"] ="Bearer " + data[:access_token]
     end
 
     # Read document info or export.
@@ -30,6 +46,7 @@ module AsposeDiagramCloud
     # @return [File]
     def diagram_file_get_diagram(name, opts = {})
       data, _status_code, _headers = diagram_file_get_diagram_with_http_info(name, opts)
+      request_token if _status_code == 401
       return data
     end
 
@@ -96,6 +113,7 @@ module AsposeDiagramCloud
     # @return [SaveResponse]
     def diagram_file_post_save_as(name, opts = {})
       data, _status_code, _headers = diagram_file_post_save_as_with_http_info(name, opts)
+      request_token if _status_code == 401
       return data
     end
 
@@ -163,6 +181,7 @@ module AsposeDiagramCloud
     # @return [SaaSposeResponse]
     def diagram_file_put_create(name, opts = {})
       data, _status_code, _headers = diagram_file_put_create_with_http_info(name, opts)
+      request_token if _status_code == 401
       return data
     end
 
@@ -227,6 +246,7 @@ module AsposeDiagramCloud
     # @return [SaaSposeResponse]
     def diagram_file_put_upload(name, opts = {})
       data, _status_code, _headers = diagram_file_put_upload_with_http_info(name, opts)
+      request_token if _status_code == 401
       return data
     end
 

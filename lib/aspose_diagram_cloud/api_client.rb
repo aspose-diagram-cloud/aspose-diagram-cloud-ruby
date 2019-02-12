@@ -49,7 +49,6 @@ module AsposeDiagramCloud
     def call_api(http_method, path, opts = {})
       request = build_request(http_method, path, opts)
       response = request.run
-
       if @config.debugging
         @config.logger.debug "HTTP response body ~BEGIN~\n#{response.body}\n~END~\n"
       end
