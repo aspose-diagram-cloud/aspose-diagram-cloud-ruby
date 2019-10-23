@@ -1,10 +1,10 @@
 # AsposeDiagramCloud::OAuthApi
 
-All URIs are relative to *https://api.aspose.cloud/v1.1/*
+All URIs are relative to *https://api.aspose.cloud/v3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**o_auth_post**](OAuthApi.md#o_auth_post) | **POST** /oauth2/token | Get Access token
+[**o_auth_post**](OAuthApi.md#o_auth_post) | **POST** /connect/token | Get Access token
 
 
 # **o_auth_post**
@@ -15,7 +15,7 @@ Get Access token
 ### Example
 ```ruby
 # load the gem
-require 'aspose_diagram_cloud'
+require 'AsposeDiagramCloud'
 
 api_instance = AsposeDiagramCloud::OAuthApi.new
 
