@@ -61,6 +61,13 @@ It gives you an ability to:
 * Copy and move files and folders accross separate storages in scope of a single operation
 * Check if certain file, folder or storage exists
 
+# Usage
+Please, add the following [gem](https://rubygems.org/gems/aspose_diagram_cloud) to your project.
+
+```shell
+gem install aspose_diagram_cloud
+```
+
 # Examples
 Please, look at [Examples](EXAMPLES.md) document for basic usage or use the [Examples](Examples) folder for more sophisticated scenarios.
 
