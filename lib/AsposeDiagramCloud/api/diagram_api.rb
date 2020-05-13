@@ -296,5 +296,473 @@ module AsposeDiagramCloud
       end
       return data, status_code, headers
     end
+
+     # draw ellipse on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param ellipse_data drawing ellipse data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def put_draw_ellipse(name, page_name, ellipse_data, opts = {})
+      data, _status_code, _headers = put_draw_ellipse_with_http_info(name, page_name, ellipse_data, opts)
+      return data
+    end
+
+    # draw ellipse on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param ellipse_data drawing ellipse data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def put_draw_ellipse_with_http_info(name, page_name, ellipse_data, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DrawApi.put_draw_ellipse ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling DrawApi.put_draw_ellipse"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling DrawApi.put_draw_ellipse"
+      end
+      # verify the required parameter 'ellipse_data' is set
+      if @api_client.config.client_side_validation && ellipse_data.nil?
+        fail ArgumentError, "Missing the required parameter 'ellipse_data' when calling DrawApi.put_draw_ellipse"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/{pageName}/drawEllipse".sub('{' + 'name' + '}', name.to_s).sub('{' + 'pageName' + '}', page_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(ellipse_data)
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DrawApi#put_draw_ellipse\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # draw line on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param line_data drawing line data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def put_draw_line(name, page_name, line_data, opts = {})
+      data, _status_code, _headers = put_draw_line_with_http_info(name, page_name, line_data, opts)
+      return data
+    end
+
+    # draw line on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param line_data drawing line data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def put_draw_line_with_http_info(name, page_name, line_data, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DrawApi.put_draw_line ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling DrawApi.put_draw_line"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling DrawApi.put_draw_line"
+      end
+      # verify the required parameter 'line_data' is set
+      if @api_client.config.client_side_validation && line_data.nil?
+        fail ArgumentError, "Missing the required parameter 'line_data' when calling DrawApi.put_draw_line"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/{pageName}/drawLine".sub('{' + 'name' + '}', name.to_s).sub('{' + 'pageName' + '}', page_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(line_data)
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DrawApi#put_draw_line\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # draw polyline on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param polyline_data drawing polyline data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def put_draw_polyline(name, page_name, polyline_data, opts = {})
+      data, _status_code, _headers = put_draw_polyline_with_http_info(name, page_name, polyline_data, opts)
+      return data
+    end
+
+    # draw polyline on the page.
+    # 
+    # @param name Document name.
+    # @param page_name Page name.
+    # @param polyline_data drawing polyline data.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def put_draw_polyline_with_http_info(name, page_name, polyline_data, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DrawApi.put_draw_polyline ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling DrawApi.put_draw_polyline"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling DrawApi.put_draw_polyline"
+      end
+      # verify the required parameter 'polyline_data' is set
+      if @api_client.config.client_side_validation && polyline_data.nil?
+        fail ArgumentError, "Missing the required parameter 'polyline_data' when calling DrawApi.put_draw_polyline"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/{pageName}/drawPolyline".sub('{' + 'name' + '}', name.to_s).sub('{' + 'pageName' + '}', page_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(polyline_data)
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DrawApi#put_draw_polyline\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+     # Remove Page
+    # 
+    # @param name Document name.
+    # @param page_name The page name for delete.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def delete_page(name, page_name, opts = {})
+      data, _status_code, _headers = delete_page_with_http_info(name, page_name, opts)
+      return data
+    end
+
+    # Remove Page
+    # 
+    # @param name Document name.
+    # @param page_name The page name for delete.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def delete_page_with_http_info(name, page_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PageApi.delete_page ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling PageApi.delete_page"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling PageApi.delete_page"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/{pageName}".sub('{' + 'name' + '}', name.to_s).sub('{' + 'pageName' + '}', page_name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:DELETE, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PageApi#delete_page\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Read pages info.
+    # 
+    # @param name Document name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ApiResponseOfListOfPageData]
+    def get_pages(name, opts = {})
+      data, _status_code, _headers = get_pages_with_http_info(name, opts)
+      return data
+    end
+
+    # Read pages info.
+    # 
+    # @param name Document name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ApiResponseOfListOfPageData, Fixnum, Hash)>] ApiResponseOfListOfPageData data, response status code and response headers
+    def get_pages_with_http_info(name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PageApi.get_pages ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling PageApi.get_pages"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ApiResponseOfListOfPageData')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PageApi#get_pages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # page setup
+    # 
+    # @param name Document name.
+    # @param page_name The page name for setting.
+    # @param page_setting Page setting info.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def post_page_setup(name, page_name, page_setting, opts = {})
+      data, _status_code, _headers = post_page_setup_with_http_info(name, page_name, page_setting, opts)
+      return data
+    end
+
+    # page setup
+    # 
+    # @param name Document name.
+    # @param page_name The page name for setting.
+    # @param page_setting Page setting info.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def post_page_setup_with_http_info(name, page_name, page_setting, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PageApi.post_page_setup ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling PageApi.post_page_setup"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling PageApi.post_page_setup"
+      end
+      # verify the required parameter 'page_setting' is set
+      if @api_client.config.client_side_validation && page_setting.nil?
+        fail ArgumentError, "Missing the required parameter 'page_setting' when calling PageApi.post_page_setup"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/PageSetup".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageName'] = page_name
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = @api_client.object_to_http_body(page_setting)
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PageApi#post_page_setup\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Add new empty page
+    # 
+    # @param name Document name.
+    # @param page_name New page name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [ModifyResponse]
+    def put_new_page(name, page_name, opts = {})
+      data, _status_code, _headers = put_new_page_with_http_info(name, page_name, opts)
+      return data
+    end
+
+    # Add new empty page
+    # 
+    # @param name Document name.
+    # @param page_name New page name.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :folder Document folder.
+    # @return [Array<(ModifyResponse, Fixnum, Hash)>] ModifyResponse data, response status code and response headers
+    def put_new_page_with_http_info(name, page_name, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: PageApi.put_new_page ..."
+      end
+      # verify the required parameter 'name' is set
+      if @api_client.config.client_side_validation && name.nil?
+        fail ArgumentError, "Missing the required parameter 'name' when calling PageApi.put_new_page"
+      end
+      # verify the required parameter 'page_name' is set
+      if @api_client.config.client_side_validation && page_name.nil?
+        fail ArgumentError, "Missing the required parameter 'page_name' when calling PageApi.put_new_page"
+      end
+      # resource path
+      local_var_path = "/diagram/{name}/pages/addNew".sub('{' + 'name' + '}', name.to_s)
+
+      # query parameters
+      query_params = {}
+      query_params[:'pageName'] = page_name
+      query_params[:'folder'] = opts[:'folder'] if !opts[:'folder'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['JWT']
+      data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'ModifyResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PageApi#put_new_page\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
   end
 end

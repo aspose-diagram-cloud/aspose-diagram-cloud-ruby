@@ -11,5 +11,5 @@ Swagger Codegen version: 2.3.0-SNAPSHOT
 =end
 
 module AsposeDiagramCloud
-  VERSION = "19.10"
+  VERSION = "20.3"
 end
