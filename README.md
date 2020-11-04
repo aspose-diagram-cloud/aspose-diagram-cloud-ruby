@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_diagram_cloud) ![npm](https://img.shields.io/npm/v/asposediagramcloud) [![GitHub license](https://img.shields.io/github/license/aspose-diagram-cloud/aspose-Diagram-cloud-ruby)](https://github.com/aspose-diagram-cloud/aspose-Diagram-cloud-ruby/blob/master/LICENSE) 
+![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_diagram_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-diagram-cloud/aspose-Diagram-cloud-ruby)](https://github.com/aspose-diagram-cloud/aspose-Diagram-cloud-ruby/blob/master/LICENSE) 
 
 # Node.js SDK for Visio® Files
 
