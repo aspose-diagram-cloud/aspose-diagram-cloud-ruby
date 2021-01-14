@@ -1,16 +1,33 @@
-![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_diagram_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-diagram-cloud/aspose-Diagram-cloud-ruby)](https://github.com/aspose-diagram-cloud/aspose-Diagram-cloud-ruby/blob/master/LICENSE) 
+![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_diagram_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-diagram-cloud/aspose-Diagram-cloud-ruby)](https://github.com/aspose-diagram-cloud/aspose-Diagram-cloud-ruby/blob/master/LICENSE)
 
-# Node.js SDK for Visio® Files
+# Node.js Cloud REST API for Visio Processing
 
-[Aspose.Diagram Cloud SDK for Ruby](https://products.aspose.cloud/diagram/ruby) helps you develop Visio file manipulation applications with the help of Aspose.Diagram REST API. It allows your applications to work with Microsoft Visio Object Model in order to create the diragrams from scratch or convert diagrams to popular formats including PDF, HTML, images and other Visio formats.
+[Aspose.Diagram Cloud SDK for Ruby](https://products.aspose.cloud/diagram/ruby) helps you develop Visio file manipulation applications with the help of Aspose.Diagram REST API. It allows your applications to work with Microsoft Visio Object Model in order to create the diagrams from scratch or convert diagrams to popular formats including PDF, HTML, images and other Visio formats.
 
-## Process Diagrams in the Cloud
+## Visio Processing Features
 
-- Programmatically create new Microsoft Visio diagrams via API.
+- [Convert diagrams](https://docs.aspose.cloud/diagram/convert-diagram-file-to-another-format/) to 20+ different file formats.
+- Retrieve document information of a Visio diagram.
+- Programmatically create a new Microsoft Visio diagram file.
 - Convert Visio flow-charts to other supported formats.
-- Retrieve document information of a Visio file.
-- Export Visio files to raster images, fixed-layout and HTML formats.
-- Upload your business oriented Visio diagrams to cloud storage.
+- Upload your business-oriented Visio diagrams to cloud storage.
+- Export Visio files to raster images, fixed-layout, and HTML formats.
+
+Please refer to [Developer's Guide](https://docs.aspose.cloud/diagram/developer-guide/) to see what else you can achieve.
+## Read & Write Visio Formats
+
+**Microsoft Visio:** VSDX, VSX, VTX, VDX, VSSX, VSTX, VSDM, VSSM, VSTM
+
+## Save Visio As
+
+**Fixed Layout:** PDF, XPS
+**Images:** JPEG, PNG, BMP, TIFF, SVG, EMF
+**Web:** HTML
+**Other:** XAML, SWF
+
+## Read Visio Formats
+
+**Microsoft Visio:** VDW, VSD, VSS, VST
 
 Please refer to [Developer's Guide](https://docs.aspose.cloud/diagram/developer-guide/) to see what else you can achieve.
 
@@ -26,21 +43,6 @@ Please refer to [Developer's Guide](https://docs.aspose.cloud/diagram/developer-
   - Ellipse
 
 For the detailed notes, please visit [Aspose.Diagram Cloud 20.3 Release Notes](https://docs.aspose.cloud/diagram/aspose-diagram-cloud-20-3-release-notes/).
-
-## Read & Write Visio Formats
-
-**Microsoft Visio:** VSDX, VSX, VTX, VDX, VSSX, VSTX, VSDM, VSSM, VSTM
-
-## Save Diagrams As
-
-**Fixed Layout:** PDF, XPS
-**Images:** JPEG, PNG, BMP, TIFF, SVG, EMF
-**Web:** HTML
-**Other:** XAML, SWF
-
-## Read Visio Formats
-
-**Microsoft Visio:** VDW, VSD, VSS, VST
 
 ## Get Started with Aspose.Diagram Cloud SDK for Ruby
 
