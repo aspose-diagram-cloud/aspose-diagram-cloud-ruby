@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/api-v3.0-lightgrey) ![Gem](https://img.shields.io/gem/v/aspose_diagram_cloud) [![GitHub license](https://img.shields.io/github/license/aspose-diagram-cloud/aspose-Diagram-cloud-ruby)](https://github.com/aspose-diagram-cloud/aspose-Diagram-cloud-ruby/blob/master/LICENSE)
 
-# Node.js Cloud REST API for Visio Processing
+# Ruby Cloud REST API for Visio Processing
 
 [Aspose.Diagram Cloud SDK for Ruby](https://products.aspose.cloud/diagram/ruby) helps you develop Visio file manipulation applications with the help of Aspose.Diagram REST API. It allows your applications to work with Microsoft Visio Object Model in order to create the diagrams from scratch or convert diagrams to popular formats including PDF, HTML, images and other Visio formats.
 
@@ -47,6 +47,23 @@ For the detailed notes, please visit [Aspose.Diagram Cloud 20.3 Release Notes](h
 ## Get Started with Aspose.Diagram Cloud SDK for Ruby
 
 All you need to do is create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/) and get your application information. Next, execute `gem install aspose_diagram_cloud` to get the package from [RubyGems](https://rubygems.org/gems/aspose_diagram_cloud).
+## Create a New VDX Format Diagram in Ruby
+
+```ruby
+    # Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+
+	configuration = AsposeDiagramCloud::Configuration.new
+	configuration.app_sid = "MY_CLIENT_ID"
+	configuration.app_key = "MY_CLIENT_SECRET"
+	configuration.grant_type = "client_credentials"
+
+	api = AsposeDiagramCloud::DiagramApi.new(configuration)
+
+	name = "sample.vdx"
+	folder = "my_output"
+	is_overwrite = true
+	result = api.create_new(name, {:name=>name, :is_overwrite=>is_overwrite, :folder=>folder})
+```
 
 ## Aspose.Diagram Cloud SDKs in Popular Languages
 
